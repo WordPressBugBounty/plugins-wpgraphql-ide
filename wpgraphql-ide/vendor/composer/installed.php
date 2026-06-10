@@ -3,7 +3,7 @@
         'name' => 'wp-graphql/wpgraphql-ide',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'bf4daf58032ab620a8a8ca29ecbd760c540cc15a',
+        'reference' => '63333e1a2e8c64fbc314e6202b9cd86b163f6491',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'wp-graphql/wpgraphql-ide' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'bf4daf58032ab620a8a8ca29ecbd760c540cc15a',
+            'reference' => '63333e1a2e8c64fbc314e6202b9cd86b163f6491',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

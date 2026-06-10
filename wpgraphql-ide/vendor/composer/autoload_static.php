@@ -4,9 +4,13 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit22a627675c8e4f85ca3bb1a4670a191f
+class ComposerStaticInit8fe98da7c2b57297eb3ff1bf715bb2c0
 {
     public static $prefixLengthsPsr4 = array (
+        'W' =>
+        array (
+            'WPGraphQLIDE\\' => 13,
+        ),
         'A' =>
         array (
             'Appsero\\' => 8,
@@ -14,6 +18,10 @@ class ComposerStaticInit22a627675c8e4f85ca3bb1a4670a191f
     );
 
     public static $prefixDirsPsr4 = array (
+        'WPGraphQLIDE\\' =>
+        array (
+            0 => __DIR__ . '/../..' . '/includes',
+        ),
         'Appsero\\' =>
         array (
             0 => __DIR__ . '/..' . '/appsero/client/src',
@@ -25,14 +33,23 @@ class ComposerStaticInit22a627675c8e4f85ca3bb1a4670a191f
         'Appsero\\Insights' => __DIR__ . '/..' . '/appsero/client/src/Insights.php',
         'Appsero\\License' => __DIR__ . '/..' . '/appsero/client/src/License.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'WPGraphQLIDE\\Access' => __DIR__ . '/../..' . '/includes/Access.php',
+        'WPGraphQLIDE\\AdminUI' => __DIR__ . '/../..' . '/includes/AdminUI.php',
+        'WPGraphQLIDE\\AssetEnqueue' => __DIR__ . '/../..' . '/includes/AssetEnqueue.php',
+        'WPGraphQLIDE\\ImportExport' => __DIR__ . '/../..' . '/includes/ImportExport.php',
+        'WPGraphQLIDE\\Rest' => __DIR__ . '/../..' . '/includes/Rest.php',
+        'WPGraphQLIDE\\SettingsPage' => __DIR__ . '/../..' . '/includes/SettingsPage.php',
+        'WPGraphQLIDE\\SmartCacheBridge' => __DIR__ . '/../..' . '/includes/SmartCacheBridge.php',
+        'WPGraphQLIDE\\Telemetry' => __DIR__ . '/../..' . '/includes/Telemetry.php',
+        'WPGraphQLIDE\\UserMeta' => __DIR__ . '/../..' . '/includes/UserMeta.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit22a627675c8e4f85ca3bb1a4670a191f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit22a627675c8e4f85ca3bb1a4670a191f::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit22a627675c8e4f85ca3bb1a4670a191f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit8fe98da7c2b57297eb3ff1bf715bb2c0::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit8fe98da7c2b57297eb3ff1bf715bb2c0::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit8fe98da7c2b57297eb3ff1bf715bb2c0::$classMap;
 
         }, null, ClassLoader::class);
     }

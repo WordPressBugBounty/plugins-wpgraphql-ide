@@ -10,4 +10,13 @@ return array(
     'Appsero\\Insights' => $vendorDir . '/appsero/client/src/Insights.php',
     'Appsero\\License' => $vendorDir . '/appsero/client/src/License.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'WPGraphQLIDE\\Access' => $baseDir . '/includes/Access.php',
+    'WPGraphQLIDE\\AdminUI' => $baseDir . '/includes/AdminUI.php',
+    'WPGraphQLIDE\\AssetEnqueue' => $baseDir . '/includes/AssetEnqueue.php',
+    'WPGraphQLIDE\\ImportExport' => $baseDir . '/includes/ImportExport.php',
+    'WPGraphQLIDE\\Rest' => $baseDir . '/includes/Rest.php',
+    'WPGraphQLIDE\\SettingsPage' => $baseDir . '/includes/SettingsPage.php',
+    'WPGraphQLIDE\\SmartCacheBridge' => $baseDir . '/includes/SmartCacheBridge.php',
+    'WPGraphQLIDE\\Telemetry' => $baseDir . '/includes/Telemetry.php',
+    'WPGraphQLIDE\\UserMeta' => $baseDir . '/includes/UserMeta.php',
 );
