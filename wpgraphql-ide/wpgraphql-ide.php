@@ -1,15 +1,16 @@
 <?php
 /**
  * Plugin Name:       WPGraphQL IDE
+ * Plugin URI:        https://wordpress.org/plugins/wpgraphql-ide/
  * Description:       A next-gen query editor for WPGraphQL.
- * Author:            WPGraphQL, Joseph Fusco
- * Author URI:        https://github.com/josephfusco
- * GitHub Plugin URI: https://github.com/wp-graphql/wpgraphql-ide
+ * Author:            WPGraphQL
+ * Author URI:        https://www.wpgraphql.com
+ * GitHub Plugin URI: https://github.com/wp-graphql/wp-graphql
  * License:           GPL-3
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       wpgraphql-ide
  * Domain Path:       /languages
- * Version:           5.0.1
+ * Version:           5.1.0
  * Requires at least: 6.1
  * Tested up to:      7.0
  * Requires PHP:      7.4
@@ -28,7 +29,7 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/vendor/autoload.php';
 }
 
-define( 'WPGRAPHQL_IDE_VERSION', '5.0.1' );
+define( 'WPGRAPHQL_IDE_VERSION', '5.1.0' );
 define( 'WPGRAPHQL_IDE_ROOT_ELEMENT_ID', 'wpgraphql-ide-root' );
 define( 'WPGRAPHQL_IDE_PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'WPGRAPHQL_IDE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -128,6 +129,7 @@ function initialize_plugin() {
 	add_filter( 'graphql_setting_field_config', [ \WPGraphQLIDE\SettingsPage::class, 'rewrite_legacy_graphiql_link' ], 10, 3 );
 	add_filter( 'graphql_get_setting_section_field_value', [ \WPGraphQLIDE\SettingsPage::class, 'force_legacy_graphiql_off' ], 10, 5 );
 	add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), [ \WPGraphQLIDE\AdminUI::class, 'add_settings_link' ] );
+	add_filter( 'plugin_row_meta', [ \WPGraphQLIDE\AdminUI::class, 'add_plugin_row_meta' ], 10, 2 );
 
 	// Scope REST queries to the current user's own documents.
 	// `graphql_document` is Smart Cache's saved-document post type — the
